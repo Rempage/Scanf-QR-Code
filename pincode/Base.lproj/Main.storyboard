@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo.png" translatesAutoresizingMaskIntoConstraints="NO" id="qJN-Ae-RoY">
+                                <rect key="frame" x="180" y="28" width="240" height="240"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Uwn-xr-0B5"/>
+                                    <constraint firstAttribute="width" constant="240" id="qYg-iW-k9u"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Z2L-9I-AJp" appends="YES" id="11P-vU-tEV"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击图片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysz-Td-nFe">
+                                <rect key="frame" x="180" y="346" width="240" height="21"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Qtr-VQ-TBR"/>
+                                    <constraint firstAttribute="height" constant="21" id="t6d-hU-Zpo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="qJN-Ae-RoY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5MY-PR-8Gk"/>
+                            <constraint firstItem="Ysz-Td-nFe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KoI-aw-6uS"/>
+                            <constraint firstItem="Ysz-Td-nFe" firstAttribute="top" secondItem="qJN-Ae-RoY" secondAttribute="bottom" constant="78" id="SBX-k7-CUd"/>
+                            <constraint firstItem="qJN-Ae-RoY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="SYL-9W-i96"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeImageV" destination="qJN-Ae-RoY" id="uPu-b6-UTz"/>
+                        <outlet property="resultLabel" destination="Ysz-Td-nFe" id="cwX-js-eie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Z2L-9I-AJp">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="QNn-ee-HrF"/>
+                        <outlet property="delegate" destination="qJN-Ae-RoY" id="bm2-Mr-QLd"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="305" y="387"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="demo.png" width="280" height="280"/>
+    </resources>
+</document>
